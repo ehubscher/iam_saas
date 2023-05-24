@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OAuth2 as a Service">
+    <meta name="author" content="Eliyahu Hubscher">
+    <meta name="keywords" content="OAuth2, SaaS, Authorization as a Service">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-indigo.min.css" />
+
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <style>
+        :root {
+            --cbd-palette-primary: ;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Medium screens breakpoint (i.e. 992px wide or less). */
+        @media screen and (max-width: 992px) {}
+
+        /* Small screens breakpoint (i.e. 600px wide or less). */
+        @media screen and (max-width: 600px) {}
+    </style>
+</head>
+
+<body>
+    <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+        <div class="mdl-tabs__tab-bar">
+            <a href={% url 'login' %} class="mdl-tabs__tab is-active">Home</a>
+            <a href={% url '' %} class="mdl-tabs__tab">Sign Up</a>
+            <a href={% url 'login' %} class="mdl-tabs__tab">Sign In</a>
+        </div>
+    </div>
+
+    <main role="main" class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+
+</html>
